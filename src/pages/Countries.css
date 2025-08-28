@@ -1,0 +1,86 @@
+.countries-container {
+  min-height: 70vh;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f0f4ff, #fafcff);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section heading */
+.countries-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.countries-container h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #16a085; /* teal accent */
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Card styling */
+.country-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.country-card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #34495e;
+}
+
+/* Highlight values */
+.country-card h2:nth-child(3) {
+  color: #16a085;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .countries-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .countries-container h1 {
+    grid-column: 1 / -1; /* make heading span */
+  }
+
+  .country-card {
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .countries-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .countries-container h1 {
+    font-size: 2.5rem;
+  }
+}
